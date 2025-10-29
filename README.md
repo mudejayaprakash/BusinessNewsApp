@@ -258,11 +258,6 @@ BusinessNewsApp/
 
 ---
 
-## 📞 Contact
-
-If you encounter issues, contact:
-- [Your Name] - [Your Email]
-- [Friend's Name] - [Friend's Email]
 
 ---
 
@@ -325,4 +320,3 @@ ScaffoldingReadMe.txt
 .DS_Store
 
 # Don't commit the API key file (optional - only if you create a separate file)
-# appsettings.Development.json

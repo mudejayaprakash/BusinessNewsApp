@@ -1,0 +1,99 @@
+@model List<BusinessNewsApp.Models.NewsArticle>
+
+@{
+    ViewData["Title"] = "US Business News";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center mb-4">Top Business Headlines - United States</h1>
+            <p class="text-center text-muted mb-5">Latest business news from major US publishers</p>
+
+            @* DEBUG INFORMATION *@
+            @if (ViewBag.DebugInfo != null)
+            {
+                <div class="alert alert-info">
+                    <h5>🔍 Debug Info:</h5>
+                    <p><strong>API Key:</strong> @ViewBag.DebugInfo</p>
+                    @if (ViewBag.DebugUrl != null)
+                    {
+                        <p><strong>URL:</strong> @ViewBag.DebugUrl</p>
+                    }
+                    @if (ViewBag.DebugStatus != null)
+                    {
+                        <p><strong>Status:</strong> @ViewBag.DebugStatus</p>
+                    }
+                </div>
+            }
+
+            @* ERROR MESSAGE *@
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    <h5>❌ Error:</h5>
+                    <p>@ViewBag.ErrorMessage</p>
+                </div>
+            }
+
+            @* FULL API RESPONSE *@
+            @if (ViewBag.DebugResponse != null)
+            {
+                <div class="alert alert-warning">
+                    <h5>📡 Full API Response:</h5>
+                    <pre style="max-height: 300px; overflow: auto; background: #f5f5f5; padding: 10px;">@ViewBag.DebugResponse</pre>
+                </div>
+            }
+
+            @* NEWS ARTICLES *@
+            @if (Model != null && Model.Any())
+            {
+                <div class="news-articles">
+                    @foreach (var article in Model)
+                    {
+                        <div class="article-item mb-4 p-3 border rounded">
+                            <p class="mb-2">
+                                <strong>Source:</strong> 
+                                <span class="badge bg-primary">@article.Source?.Name</span>
+                            </p>
+                            
+                            <p class="mb-2">
+                                <strong>Title:</strong> @article.Title
+                            </p>
+                            
+                            <p class="mb-0">
+                                <strong>URL:</strong> 
+                                <a href="@article.Url" target="_blank" class="text-decoration-none">
+                                    Read Full Article →
+                                </a>
+                            </p>
+                        </div>
+                        <hr class="my-3">
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center" role="alert">
+                    <p class="mb-0">No news articles available at this time.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .article-item {
+        background-color: #f8f9fa;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .article-item:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .news-articles {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+</style>

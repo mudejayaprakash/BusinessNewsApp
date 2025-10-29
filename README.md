@@ -1,10 +1,10 @@
 # Business News App - ASP.NET Core MVC
 
 ## Team Members
-- Member 1: [Mude Jayaprakash]
-- Member 2: [Pradeep]
-- Member 3: [Name]
-- Member 4: [Name]
+- Member 1: Mude Jayaprakash
+- Member 2: Pradeep
+- Member 3: Kaylee Eckelman
+- Member 4: Mythily
 
 ## Description
 This application fetches and displays top business headlines using NewsAPI. Built with ASP.NET Core MVC architecture.

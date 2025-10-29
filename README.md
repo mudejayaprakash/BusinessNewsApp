@@ -6,10 +6,6 @@
 - Member 3: Kaylee Eckelman
 - Member 4: Mythily
 
-## Example of Web Page
-![Uploading image.png…]()
-
-
 ## Description
 This application fetches and displays top business headlines using NewsAPI. Built with ASP.NET Core MVC architecture.
 

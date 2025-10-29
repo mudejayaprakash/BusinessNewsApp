@@ -1,8 +1,8 @@
 # Business News App - ASP.NET Core MVC
 
 ## Team Members
-- Member 1: [Your Name]
-- Member 2: [Friend's Name]
+- Member 1: [Mude Jayaprakash]
+- Member 2: [Pradeep]
 - Member 3: [Name]
 - Member 4: [Name]
 
